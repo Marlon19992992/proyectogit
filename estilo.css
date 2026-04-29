@@ -1,0 +1,81 @@
+body {
+    background: #050505; /* Fondo más oscuro para que resalte el neón */
+    color: #00d4ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#login-box {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    /* Borde neón principal */
+    border: 2px solid #00d4ff;
+    box-shadow: 0 0 15px #00d4ff, inset 0 0 10px #00d4ff;
+    
+    /* Animación de entrada */
+    animation: fadeIn 1.2s ease-out;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00d4ff;
+    margin-bottom: 20px;
+}
+
+input {
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    width: 80%;
+    background: transparent;
+    border: 1px solid #00d4ff;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efecto al hacer clic en los inputs */
+input:focus {
+    box-shadow: 0 0 15px #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+}
+
+button {
+    background: #00d4ff;
+    color: #050505;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.4s;
+    box-shadow: 0 0 10px #00d4ff;
+}
+
+button:hover {
+    background: #fff;
+    box-shadow: 0 0 25px #fff;
+    transform: scale(1.05);
+}
+
+/* Definición de la animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
