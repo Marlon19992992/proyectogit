@@ -1,81 +1,78 @@
 body {
-    background: #050505; /* Fondo más oscuro para que resalte el neón */
-    color: #00d4ff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    background: radial-gradient(circle at top, #1a002f, #000000);
+    color: #e0d3ff;
+    font-family: 'Orbitron', sans-serif;
 }
 
-#login-box {
-    background: rgba(20, 20, 20, 0.9);
-    padding: 40px;
+/* Títulos */
+h1, h2, h3 {
+    color: #c77dff;
+    text-shadow: 0 0 10px #9d4edd, 0 0 20px #7b2cbf;
+}
+
+/* Tarjetas */
+.card {
+    background: rgba(20, 0, 40, 0.8);
+    border: 1px solid #7b2cbf;
     border-radius: 15px;
-    text-align: center;
-    /* Borde neón principal */
-    border: 2px solid #00d4ff;
-    box-shadow: 0 0 15px #00d4ff, inset 0 0 10px #00d4ff;
-    
-    /* Animación de entrada */
-    animation: fadeIn 1.2s ease-out;
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
 }
 
-h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px #00d4ff;
-    margin-bottom: 20px;
+/* Botones */
+.btn {
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-input {
-    display: block;
-    margin: 20px auto;
-    padding: 12px;
-    width: 80%;
-    background: transparent;
-    border: 1px solid #00d4ff;
-    border-radius: 5px;
-    color: white;
-    outline: none;
-    transition: 0.3s;
-}
-
-/* Efecto al hacer clic en los inputs */
-input:focus {
-    box-shadow: 0 0 15px #00d4ff;
-    background: rgba(0, 212, 255, 0.1);
-}
-
-button {
-    background: #00d4ff;
-    color: #050505;
+.btn-primary {
+    background: #7b2cbf;
     border: none;
-    padding: 10px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.4s;
-    box-shadow: 0 0 10px #00d4ff;
 }
 
-button:hover {
-    background: #fff;
-    box-shadow: 0 0 25px #fff;
-    transform: scale(1.05);
+.btn-primary:hover {
+    background: #9d4edd;
+    box-shadow: 0 0 10px #c77dff;
 }
 
-/* Definición de la animación de entrada */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-danger {
+    background: #ff006e;
+    border: none;
+}
+
+.btn-danger:hover {
+    box-shadow: 0 0 10px #ff4d9d;
+}
+
+/* Imagen del carrusel */
+.img-sustituida {
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(199, 125, 255, 0.5);
+}
+
+/* Panel contenedor */
+#contenedor-ajax {
+    border: 2px solid #7b2cbf;
+    box-shadow: inset 0 0 20px #9d4edd;
+}
+
+/* Texto info */
+#nombre-foto {
+    color: #c77dff;
+    text-shadow: 0 0 5px #9d4edd;
+}
+
+#contador {
+    background: #240046;
+    color: #fff;
+}
+
+/* Botón flotante admin */
+.btn-admin {
+    background: #3c096c;
+    border: none;
+}
+
+.btn-admin:hover {
+    background: #5a189a;
+    box-shadow: 0 0 15px #c77dff;
 }
