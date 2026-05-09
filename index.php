@@ -6,17 +6,30 @@ include("db.php");
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Carrusel Cyberpunk</title>
-
+    <title>Proyecto Carrusel - Sustitución AJAX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- FUENTE -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- TU CSS -->
-    <link rel="stylesheet" href="css/estilo.css">
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Contenedor principal sin transiciones */
+        #contenedor-ajax {
+            min-height: 550px;
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: none !important; /* BLOQUEA CUALQUIER ANIMACIÓN */
+        }
+
+        .img-sustituida {
+            height: 550px;
+            width: 100%;
+            object-fit: cover;
+            display: block; /* Evita que Bootstrap intente animarla como item de carrusel */
+        }
+
+        .btn-admin { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+    </style>
 </head>
 <body class="bg-light">
 
