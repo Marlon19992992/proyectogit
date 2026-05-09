@@ -1,12 +1,7 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$db = "carrusel";
+$conexion = mysqli_connect("localhost", "root", "", "carrusel");
 
-$conn = new mysqli($host, $user, $password, $db);
-
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+if (!$conexion) {
+    die("Error de conexión: " . mysqli_connect_error());
 }
 ?>
