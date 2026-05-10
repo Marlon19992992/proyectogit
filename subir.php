@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = $_POST['nombre_personalizado'];
     $archivo = $_FILES['imagen'];
 
-    $carpeta = "img/"; // 👈 IMPORTANTE
+    $carpeta = "img/";
 
     if (!file_exists($carpeta)) {
         mkdir($carpeta, 0777, true);
@@ -18,9 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         mysqli_query($conexion, "INSERT INTO imagenes (nombre, ruta) VALUES ('$nombre', '$ruta')");
 
-        echo "Subida OK"; // 👈 DEBUG
+        header("Location: admin.php?msg=ok"); // 👈 AQUÍ
+        exit();
+
     } else {
-        echo "Error al subir archivo"; // 👈 CLAVE
+        header("Location: admin.php?msg=error"); // 👈 AQUÍ
+        exit();
     }
 }
 ?>
