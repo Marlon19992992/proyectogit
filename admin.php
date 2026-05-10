@@ -31,7 +31,7 @@ $resultado = mysqli_query($conexion, "SELECT * FROM imagenes ORDER BY id DESC");
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Panel de Control</h1>
         <div>
-            <a href="index.php" class="btn btn-primary me-2" target="_blank">Ver Carrusel</a>
+            <a href="index.php" class="btn btn-primary me-2">Ver Carrusel</a>
             <a href="registro_user.php" class="btn btn-success me-2">Nuevo Usuario</a>
             <a href="logout.php" class="btn btn-danger">Cerrar Sesión</a>
         </div>
