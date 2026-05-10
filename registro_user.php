@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Usuario creado'); window.location='login.php';</script>";
         exit();
     } else {
-        echo "Error: " . mysqli_error($conexion);
+        echo "<div class='alert alert-danger'>Error: " . mysqli_error($conexion) . "</div>";
     }
 }
 ?>
@@ -22,17 +22,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registrar</title>
+    <title>Registrar Usuario</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-<h2>Crear usuario</h2>
+<body class="bg-dark text-white">
 
-<form method="POST">
-    <input type="text" name="username" placeholder="Usuario" required>
-    <input type="password" name="password" placeholder="Contraseña" required>
-    <button type="submit">Registrar</button>
-</form>
+<div class="container mt-5" style="max-width:400px;">
+    <div class="card p-4 bg-black text-white shadow">
+
+        <h3 class="text-center mb-3">Nuevo Usuario</h3>
+
+        <form method="POST">
+            <input type="text" name="username" class="form-control mb-3" placeholder="Usuario" required>
+
+            <input type="password" name="password" class="form-control mb-3" placeholder="Contraseña" required>
+
+            <button class="btn btn-success w-100">Registrar</button>
+        </form>
+
+        <a href="login.php" class="btn btn-link text-info mt-2">Ir al login</a>
+
+    </div>
+</div>
 
 </body>
 </html>
