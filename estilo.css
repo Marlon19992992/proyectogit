@@ -71,3 +71,39 @@ h3 {
     from { text-shadow: 0 0 5px #9d4edd; }
     to { text-shadow: 0 0 20px #c77dff; }
 }
+/* HEADER GLOW */
+h1 {
+    text-shadow: 0 0 10px #9d4edd, 0 0 25px #c77dff;
+}
+
+/* TABLA CYBER */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    color: #c77dff;
+    text-shadow: 0 0 5px #9d4edd;
+}
+
+/* HOVER FILAS */
+.table-hover tbody tr:hover {
+    background-color: rgba(157, 78, 221, 0.2);
+    transition: 0.3s;
+}
+
+/* CARD MÁS VIVA */
+.card {
+    backdrop-filter: blur(5px);
+}
+
+/* BOTÓN SUCCESS (para registro) */
+.btn-success {
+    background: #560bad;
+    border: none;
+}
+
+.btn-success:hover {
+    box-shadow: 0 0 10px #c77dff;
+}
