@@ -22,34 +22,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Login</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Cyberpunk opcional -->
+    <!-- Fuente futurista -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tu CSS -->
     <link rel="stylesheet" href="estilo.css">
 </head>
 
-<body class="bg-dark text-white">
+<body class="bg-dark text-white d-flex justify-content-center align-items-center" style="min-height:100vh;">
 
-<div class="container mt-5" style="max-width:400px;">
+<div style="width: 100%; max-width: 420px;">
     <div class="card p-4 shadow-lg bg-black text-white">
 
-        <h3 class="text-center mb-3">Login</h3>
+        <h3 class="text-center mb-4">⚡ LOGIN</h3>
 
         <?php if(isset($error)): ?>
-            <div class="alert alert-danger"><?php echo $error; ?></div>
+            <div class="alert alert-danger text-center">
+                <?php echo $error; ?>
+            </div>
         <?php endif; ?>
 
         <form method="POST">
-            <input type="text" name="username" class="form-control mb-3" placeholder="Usuario" required>
 
-            <input type="password" name="password" class="form-control mb-3" placeholder="Contraseña" required>
+            <input type="text" name="username" 
+                   class="form-control mb-3" 
+                   placeholder="👤 Usuario" required>
 
-            <button class="btn btn-primary w-100">Entrar</button>
+            <input type="password" name="password" 
+                   class="form-control mb-3" 
+                   placeholder="🔒 Contraseña" required>
+
+            <button class="btn btn-primary w-100 mb-2">
+                Entrar
+            </button>
+
         </form>
 
     </div>
