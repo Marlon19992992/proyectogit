@@ -1,24 +1,23 @@
 <?php
-include 'db.php'; 
+include 'db.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['imagen'])) {
-    $nombre_mostrar = mysqli_real_escape_string($conexion, $_POST['nombre_personalizado']);
-    $nombre_archivo = $_FILES['imagen']['name'];
-    $ruta_temporal = $_FILES['imagen']['tmp_name'];
-    $carpeta_destino = "img/"; // 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if (!file_exists($carpeta_destino)) {
-        mkdir($carpeta_destino, 0777, true);
+    $nombre = $_POST['nombre_personalizado'];
+    $archivo = $_FILES['imagen'];
+
+    $carpeta = "img/";
+
+    if (!file_exists($carpeta)) {
+        mkdir($carpeta, 0777, true);
     }
 
-    $ruta_final = $carpeta_destino . time() . "_" . $nombre_archivo;
+    $ruta = $carpeta . time() . "_" . $archivo['name'];
 
-    if (move_uploaded_file($ruta_temporal, $ruta_final)) {
-        $sql = "INSERT INTO imagenes (nombre, ruta) VALUES ('$nombre_mostrar', '$ruta_final')";
-        mysqli_query($conexion, $sql);
+    if (move_uploaded_file($archivo['tmp_name'], $ruta)) {
+        mysqli_query($conexion, "INSERT INTO imagenes (nombre, ruta) VALUES ('$nombre', '$ruta')");
     }
 }
 
 header("Location: admin.php");
-exit();
 ?>
