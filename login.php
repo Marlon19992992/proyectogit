@@ -58,15 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="navbar-bento mb-4">
 
             <div class="logo">
-                CYBER GALLERY
+                DINAMIC CYBER GALLERY
             </div>
 
             <div class="nav-links">
-
-                <a href="registro.php">
-                    Registro
-                </a>
-
+    
             </div>
 
         </div>
@@ -79,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <div class="card-bento bento-large hero-image">
 
-                <img src="img/login-bg.jpg">
+                <img src="imagen.inicial/futurista.jpeg">
 
                 <div class="hero-overlay">
 
