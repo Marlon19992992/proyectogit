@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body class="bg-dark text-white d-flex justify-content-center align-items-center" style="min-height:100vh;">
 
 <div style="width: 100%; max-width: 420px;">
-    <div class="card p-4 shadow-lg bg-black text-white">
+    <div class="cyber-card">
 
         <h3 class="text-center mb-4">⚡ LOGIN</h3>
 
@@ -53,14 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form method="POST">
 
             <input type="text" name="username" 
-                   class="form-control mb-3" 
+                   class="cyber-input mb-3" 
                    placeholder="👤 Usuario" required>
 
             <input type="password" name="password" 
-                   class="form-control mb-3" 
+                   class="cyber-input mb-3" 
                    placeholder="🔒 Contraseña" required>
 
-            <button class="btn btn-primary w-100 mb-2">
+            <button class="cyber-btn w-100 mb-2">
                 Entrar
             </button>
 
