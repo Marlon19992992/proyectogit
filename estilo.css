@@ -1,4 +1,4 @@
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -74,7 +74,10 @@ body {
    TITULOS
 ========================= */
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
+
     text-align: center;
 
     color: #fff;
@@ -95,9 +98,11 @@ h2 {
 }
 
 h3 {
+
     font-size: 1.7rem;
 
-    animation: flicker 2s infinite alternate;
+    animation:
+        flicker 2s infinite alternate;
 }
 
 /* =========================
@@ -107,11 +112,13 @@ h3 {
 @keyframes flicker {
 
     from {
+
         text-shadow:
             0 0 5px #9d4edd;
     }
 
     to {
+
         text-shadow:
             0 0 18px #c77dff;
     }
@@ -122,13 +129,18 @@ h3 {
 ========================= */
 
 form {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 18px;
 }
 
 label {
+
     color: #d8b4fe;
+
     font-size: 14px;
 }
 
@@ -137,6 +149,7 @@ label {
 ========================= */
 
 .form-control {
+
     background: #0a001a;
 
     border: 1px solid #7b2cbf;
@@ -160,6 +173,8 @@ label {
     background: #0a001a;
 
     color: #fff;
+
+    outline: none;
 }
 
 /* =========================
@@ -167,6 +182,7 @@ label {
 ========================= */
 
 .btn {
+
     border: none;
 
     border-radius: 12px;
@@ -183,6 +199,7 @@ label {
 }
 
 .btn:hover {
+
     transform: translateY(-2px);
 }
 
