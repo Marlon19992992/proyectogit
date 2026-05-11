@@ -37,13 +37,18 @@ body {
 ========================= */
 
 .card {
+
+    width: 100%;
+
+    min-width: 450px;
+
     background: rgba(10, 0, 26, 0.92);
 
     border: 1px solid rgba(199, 125, 255, 0.25);
 
     border-radius: 20px;
 
-    padding: 30px;
+    padding: 40px;
 
     backdrop-filter: blur(8px);
 
