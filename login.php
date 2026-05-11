@@ -37,9 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="estilo.css">
 </head>
 
-<body class="bg-dark text-white d-flex justify-content-center align-items-center" style="min-height:100vh;">
+<body>
 
-<div style="width: 100%; max-width: 420px;">
+<div class="login-wrapper">
     <div class="cyber-card">
 
         <h3 class="text-center mb-4">⚡ LOGIN</h3>
