@@ -1,57 +1,109 @@
+/* CENTRAR LOGIN COMPLETAMENTE */
 body {
-    background: #0f172a;
-    color: white;
-    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.auth-card {
-    background: #111827;
-    border: 1px solid rgba(255,255,255,.08);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+/* CONTENEDOR LOGIN */
+.container {
+    max-width: 420px;
 }
 
+/* TARJETA LOGIN MÁS GRANDE Y CON GLOW */
+.card {
+    padding: 30px;
+    animation: glowPulse 3s infinite alternate;
+}
+
+/* ANIMACIÓN DE BRILLO */
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(199, 125, 255, 0.8);
+    }
+}
+
+/* INPUTS CYBERPUNK */
 .form-control {
-    background: #1e293b;
-    border: 1px solid rgba(255,255,255,.08);
-    color: white;
-    height: 50px;
+    background: #0a001a;
+    border: 1px solid #7b2cbf;
+    color: #fff;
+    transition: 0.3s;
 }
 
 .form-control:focus {
-    background: #1e293b;
-    color: white;
-    border-color: #8b5cf6;
-    box-shadow: 0 0 0 0.2rem rgba(139,92,246,.25);
+    border-color: #c77dff;
+    box-shadow: 0 0 10px #c77dff;
+    background: #0a001a;
+    color: #fff;
 }
 
-.btn-purple {
-    background: #8b5cf6;
-    color: white;
+/* BOTÓN CON EFECTO NEÓN */
+.btn-primary {
+    background: linear-gradient(45deg, #7b2cbf, #c77dff);
     border: none;
-    height: 50px;
-    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.btn-purple:hover {
-    background: #7c3aed;
-    color: white;
+.btn-primary:hover {
+    box-shadow: 0 0 15px #c77dff, 0 0 25px #9d4edd;
+    transform: scale(1.05);
 }
 
-.table-dark-custom {
-    background: #111827;
-    border-radius: 20px;
+/* TÍTULO LOGIN MÁS GRANDE */
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* EFECTO PARPADEO SUAVE */
+h3 {
+    animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+    from { text-shadow: 0 0 5px #9d4edd; }
+    to { text-shadow: 0 0 20px #c77dff; }
+}
+/* HEADER GLOW */
+h1 {
+    text-shadow: 0 0 10px #9d4edd, 0 0 25px #c77dff;
+}
+
+/* TABLA CYBER */
+.table {
+    border-radius: 10px;
     overflow: hidden;
 }
 
-.table-dark-custom table {
-    margin: 0;
+.table th {
+    color: #c77dff;
+    text-shadow: 0 0 5px #9d4edd;
 }
 
-.preview-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 12px;
+/* HOVER FILAS */
+.table-hover tbody tr:hover {
+    background-color: rgba(157, 78, 221, 0.2);
+    transition: 0.3s;
+}
+
+/* CARD MÁS VIVA */
+.card {
+    backdrop-filter: blur(5px);
+}
+
+/* BOTÓN SUCCESS (para registro) */
+.btn-success {
+    background: #560bad;
+    border: none;
+}
+
+.btn-success:hover {
+    box-shadow: 0 0 10px #c77dff;
 }
