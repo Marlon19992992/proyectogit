@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <title>Registrar Usuario</title>
 
-    <!-- Bootstr**ap -->
+    <!-- Bootstrap -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -41,93 +41,124 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap"
           rel="stylesheet">
 
-    <!-- Tu CSS -->
+    <!-- CSS -->
 
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="estilo.css">
 
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- NAVBAR -->
+    <!-- NAVBAR -->
 
-        <div class="navbar-bento mb-4">
+    <div class="navbar-bento mb-4">
 
-            <div class="logo">
-                CYBER GALLERY
-            </div>
+        <div class="logo">
 
-            <div class="nav-links">
+            DINAMIC CYBER GALLERY
 
-                <a href="login.php">
-                    Login
+        </div>
+
+        <div class="nav-links">
+
+            <a href="login.php">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="bento-grid">
+
+        <!-- FORMULARIO -->
+
+        <div class="card-bento bento-medium d-flex flex-column justify-content-center">
+
+            <h1 class="mb-4">
+
+                Crear Usuario
+
+            </h1>
+
+            <p class="mb-4">
+
+                Registra una nueva cuenta
+                para acceder al sistema.
+
+            </p>
+
+            <form method="POST">
+
+                <div class="mb-3">
+
+                    <input type="text"
+                           name="username"
+                           placeholder="Usuario"
+                           required>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <input type="password"
+                           name="password"
+                           placeholder="Contraseña"
+                           required>
+
+                </div>
+
+                <button class="btn-bento w-100">
+
+                    Registrar Usuario
+
+                </button>
+
+            </form>
+
+            <div class="mt-4 text-center">
+
+                <a href="login.php"
+                   style="
+                   color:#9ca3af;
+                   text-decoration:none;
+                   ">
+
+                    Ya tengo una cuenta
+
                 </a>
 
             </div>
 
         </div>
 
-        <!-- GRID BENTO -->
+        <!-- IMAGEN GRANDE -->
 
-        <div class="bento-grid">
+        <div class="card-bento bento-large hero-image">
 
-            <!-- CARD PRINCIPAL -->
+            <img src="imagen.inicial/city.jpg">
 
-            <div class="card-bento bento-medium mx-auto"
-                 style="max-width: 500px; width:100%;">
+            <div class="hero-overlay">
 
-                <h2 class="mb-4">
-                    Crear Usuario
-                </h2>
+                <h1 class="hero-title">
 
-                <p class="mb-4">
-                    Registra una nueva cuenta para acceder
-                    al sistema.
+                    Future Access
+
+                </h1>
+
+                <p class="hero-text">
+
+                    Plataforma futurista
+                    con interfaz Bento UI
+                    moderna y dinámica.
+
                 </p>
-
-                <form method="POST">
-
-                    <div class="mb-3">
-
-                        <input type="text"
-                               name="username"
-                               placeholder="Usuario"
-                               required>
-
-                    </div>
-
-                    <div class="mb-3">
-
-                        <input type="password"
-                               name="password"
-                               placeholder="Contraseña"
-                               required>
-
-                    </div>
-
-                    <button class="btn-bento w-100">
-
-                        Registrar Usuario
-
-                    </button>
-
-                </form>
-
-                <div class="mt-4 text-center">
-
-                    <a href="login.php"
-                       style="
-                       color:#9ca3af;
-                       text-decoration:none;
-                       ">
-
-                        Ya tengo una cuenta
-
-                    </a>
-
-                </div>
 
             </div>
 
@@ -135,10 +166,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     </div>
 
+</div>
+
 </body>
 
 </html>
-</html>
-
-</html>
-
