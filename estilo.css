@@ -1,109 +1,389 @@
-/* CENTRAR LOGIN COMPLETAMENTE */
+:root {
+    --bg: #0f0f0f;
+    --card: #181818;
+    --card-hover: #202020;
+    --border: #2a2a2a;
+
+    --primary: #7c3aed;
+    --primary-hover: #8b5cf6;
+
+    --danger: #ef4444;
+    --danger-hover: #f87171;
+
+    --text: #ffffff;
+    --text-soft: #9ca3af;
+
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
     min-height: 100vh;
+}
+
+/* SOLO PARA LOGIN */
+.login-page {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* CONTENEDOR LOGIN */
-.container {
-    max-width: 420px;
+/* =========================
+   TITULOS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    letter-spacing: .5px;
 }
 
-/* TARJETA LOGIN MÁS GRANDE Y CON GLOW */
+.text-muted {
+    color: var(--text-soft) !important;
+}
+
+/* =========================
+   CARDS
+========================= */
+
 .card {
-    padding: 30px;
-    animation: glowPulse 3s infinite alternate;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: .3s ease;
 }
 
-/* ANIMACIÓN DE BRILLO */
-@keyframes glowPulse {
-    from {
-        box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
-    }
-    to {
-        box-shadow: 0 0 30px rgba(199, 125, 255, 0.8);
-    }
+.card:hover {
+    transform: translateY(-4px);
+    background: var(--card-hover);
 }
 
-/* INPUTS CYBERPUNK */
-.form-control {
-    background: #0a001a;
-    border: 1px solid #7b2cbf;
-    color: #fff;
-    transition: 0.3s;
+/* =========================
+   INPUTS
+========================= */
+
+.form-control,
+.form-select,
+textarea,
+input {
+    background: #111 !important;
+    border: 1px solid #333 !important;
+    color: white !important;
+    border-radius: 14px !important;
+    padding: 12px 16px !important;
+    transition: .3s ease;
 }
 
-.form-control:focus {
-    border-color: #c77dff;
-    box-shadow: 0 0 10px #c77dff;
-    background: #0a001a;
-    color: #fff;
+.form-control:focus,
+.form-select:focus,
+textarea:focus,
+input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 .2rem rgba(124, 58, 237, .25) !important;
+    background: #111 !important;
+    color: white !important;
 }
 
-/* BOTÓN CON EFECTO NEÓN */
+/* PLACEHOLDER */
+
+::placeholder {
+    color: #777 !important;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    border-radius: 14px;
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
 .btn-primary {
-    background: linear-gradient(45deg, #7b2cbf, #c77dff);
+    background: var(--primary);
     border: none;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 15px #c77dff, 0 0 25px #9d4edd;
-    transform: scale(1.05);
+    background: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
-/* TÍTULO LOGIN MÁS GRANDE */
-h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* EFECTO PARPADEO SUAVE */
-h3 {
-    animation: flicker 2s infinite alternate;
-}
-
-@keyframes flicker {
-    from { text-shadow: 0 0 5px #9d4edd; }
-    to { text-shadow: 0 0 20px #c77dff; }
-}
-/* HEADER GLOW */
-h1 {
-    text-shadow: 0 0 10px #9d4edd, 0 0 25px #c77dff;
-}
-
-/* TABLA CYBER */
-.table {
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.table th {
-    color: #c77dff;
-    text-shadow: 0 0 5px #9d4edd;
-}
-
-/* HOVER FILAS */
-.table-hover tbody tr:hover {
-    background-color: rgba(157, 78, 221, 0.2);
-    transition: 0.3s;
-}
-
-/* CARD MÁS VIVA */
-.card {
-    backdrop-filter: blur(5px);
-}
-
-/* BOTÓN SUCCESS (para registro) */
-.btn-success {
-    background: #560bad;
+.btn-danger {
+    background: var(--danger);
     border: none;
 }
 
-.btn-success:hover {
-    box-shadow: 0 0 10px #c77dff;
+.btn-danger:hover {
+    background: var(--danger-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+    background: white;
+    color: black;
+}
+
+/* =========================
+   TABLAS
+========================= */
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    color: white;
+}
+
+.table thead th {
+    border: none !important;
+    color: var(--text-soft);
+    font-weight: 600;
+    padding-bottom: 1rem !important;
+}
+
+.table tbody tr {
+    background: var(--card);
+    transition: .3s ease;
+}
+
+.table tbody tr:hover {
+    background: #222;
+}
+
+.table td,
+.table th {
+    border: none !important;
+    padding: 18px !important;
+    vertical-align: middle;
+}
+
+/* =========================
+   IMAGENES
+========================= */
+
+.img-sustituida {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carousel {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.1)
+    );
+}
+
+.carousel-caption {
+    z-index: 10;
+    bottom: 30px;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 55px;
+    height: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,.1);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: rgba(15,15,15,.85) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+}
+
+.nav-link {
+    color: var(--text-soft) !important;
+    transition: .3s ease;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+/* =========================
+   MODALES
+========================= */
+
+.modal-content {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    color: white;
+}
+
+/* =========================
+   ALERTAS
+========================= */
+
+.alert {
+    border-radius: 16px;
+    border: none;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* =========================
+   ANIMACIONES SUAVES
+========================= */
+
+.fade-up {
+    animation: fadeUp .5s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .img-sustituida {
+        height: 400px;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .img-sustituida {
+        height: 300px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .table-responsive {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .card {
+        padding: 1.2rem;
+        border-radius: 18px;
+    }
+
+    .img-sustituida {
+        height: 240px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
 }
