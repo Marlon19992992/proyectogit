@@ -1,109 +1,342 @@
-/* CENTRAR LOGIN COMPLETAMENTE */
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-/* CONTENEDOR LOGIN */
-.container {
-    max-width: 420px;
-}
+    background:
+        radial-gradient(circle at top, #1a0033, #05010d);
 
-/* TARJETA LOGIN MÁS GRANDE Y CON GLOW */
-.card {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+
     padding: 30px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* =========================
+   CARD CYBER
+========================= */
+
+.card {
+    background: rgba(10, 0, 26, 0.92);
+
+    border: 1px solid rgba(199, 125, 255, 0.25);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(8px);
+
     animation: glowPulse 3s infinite alternate;
+
+    box-shadow:
+        0 0 15px rgba(157, 78, 221, 0.2);
 }
 
-/* ANIMACIÓN DE BRILLO */
+/* =========================
+   ANIMACIÓN GLOW
+========================= */
+
 @keyframes glowPulse {
+
     from {
-        box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+        box-shadow:
+            0 0 15px rgba(157, 78, 221, 0.25);
     }
+
     to {
-        box-shadow: 0 0 30px rgba(199, 125, 255, 0.8);
+        box-shadow:
+            0 0 28px rgba(199, 125, 255, 0.55);
     }
 }
 
-/* INPUTS CYBERPUNK */
-.form-control {
-    background: #0a001a;
-    border: 1px solid #7b2cbf;
-    color: #fff;
-    transition: 0.3s;
-}
+/* =========================
+   TITULOS
+========================= */
 
-.form-control:focus {
-    border-color: #c77dff;
-    box-shadow: 0 0 10px #c77dff;
-    background: #0a001a;
-    color: #fff;
-}
-
-/* BOTÓN CON EFECTO NEÓN */
-.btn-primary {
-    background: linear-gradient(45deg, #7b2cbf, #c77dff);
-    border: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.btn-primary:hover {
-    box-shadow: 0 0 15px #c77dff, 0 0 25px #9d4edd;
-    transform: scale(1.05);
-}
-
-/* TÍTULO LOGIN MÁS GRANDE */
-h3 {
-    font-size: 2rem;
+h1, h2, h3 {
     text-align: center;
-    margin-bottom: 20px;
+
+    color: #fff;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 8px #9d4edd,
+        0 0 18px #c77dff;
 }
 
-/* EFECTO PARPADEO SUAVE */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
 h3 {
+    font-size: 1.7rem;
+
     animation: flicker 2s infinite alternate;
 }
 
+/* =========================
+   FLICKER
+========================= */
+
 @keyframes flicker {
-    from { text-shadow: 0 0 5px #9d4edd; }
-    to { text-shadow: 0 0 20px #c77dff; }
-}
-/* HEADER GLOW */
-h1 {
-    text-shadow: 0 0 10px #9d4edd, 0 0 25px #c77dff;
+
+    from {
+        text-shadow:
+            0 0 5px #9d4edd;
+    }
+
+    to {
+        text-shadow:
+            0 0 18px #c77dff;
+    }
 }
 
-/* TABLA CYBER */
-.table {
-    border-radius: 10px;
-    overflow: hidden;
+/* =========================
+   FORMULARIOS
+========================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-.table th {
-    color: #c77dff;
-    text-shadow: 0 0 5px #9d4edd;
+label {
+    color: #d8b4fe;
+    font-size: 14px;
 }
 
-/* HOVER FILAS */
-.table-hover tbody tr:hover {
-    background-color: rgba(157, 78, 221, 0.2);
-    transition: 0.3s;
+/* =========================
+   INPUTS
+========================= */
+
+.form-control {
+    background: #0a001a;
+
+    border: 1px solid #7b2cbf;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    padding: 14px;
+
+    transition: .3s;
 }
 
-/* CARD MÁS VIVA */
-.card {
-    backdrop-filter: blur(5px);
+.form-control:focus {
+
+    border-color: #c77dff;
+
+    box-shadow:
+        0 0 10px rgba(199, 125, 255, 0.7);
+
+    background: #0a001a;
+
+    color: #fff;
 }
 
-/* BOTÓN SUCCESS (para registro) */
-.btn-success {
-    background: #560bad;
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
     border: none;
+
+    border-radius: 12px;
+
+    padding: 14px 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: .3s ease;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   BOTON PRIMARY
+========================= */
+
+.btn-primary {
+
+    background:
+        linear-gradient(
+            45deg,
+            #7b2cbf,
+            #c77dff
+        );
+
+    color: white;
+}
+
+.btn-primary:hover {
+
+    box-shadow:
+        0 0 15px #c77dff,
+        0 0 25px #9d4edd;
+}
+
+/* =========================
+   BOTON SUCCESS
+========================= */
+
+.btn-success {
+
+    background:
+        linear-gradient(
+            45deg,
+            #560bad,
+            #7b2cbf
+        );
+
+    color: white;
 }
 
 .btn-success:hover {
-    box-shadow: 0 0 10px #c77dff;
+
+    box-shadow:
+        0 0 12px #c77dff;
+}
+
+/* =========================
+   TABLAS
+========================= */
+
+.table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    margin-top: 20px;
+}
+
+.table thead {
+
+    background:
+        rgba(123, 44, 191, 0.15);
+}
+
+.table th {
+
+    color: #c77dff;
+
+    padding: 18px;
+
+    text-align: left;
+
+    text-shadow:
+        0 0 5px #9d4edd;
+}
+
+.table td {
+
+    padding: 18px;
+
+    border-top:
+        1px solid rgba(199,125,255,.12);
+}
+
+/* =========================
+   HOVER TABLA
+========================= */
+
+.table-hover tbody tr {
+
+    transition: .3s;
+}
+
+.table-hover tbody tr:hover {
+
+    background-color:
+        rgba(157, 78, 221, 0.15);
+}
+
+/* =========================
+   IMAGENES TABLA
+========================= */
+
+.table img {
+
+    width: 80px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid rgba(199,125,255,.3);
+}
+
+/* =========================
+   GRID PANEL ADMIN
+========================= */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        350px 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    body {
+
+        padding: 20px;
+    }
+
+    .card {
+
+        padding: 22px;
+    }
 }
