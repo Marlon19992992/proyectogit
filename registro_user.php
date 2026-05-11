@@ -28,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <link rel="stylesheet" href="estilo.css">
 
-<body class="bg-dark text-white">
+<body>
 
-<div class="container mt-5" style="max-width:400px;">
+<<div class="login-wrapper">
     <div class="cyber-card">
 
         <h3 class="text-center mb-3">Nuevo Usuario</h3>
@@ -40,10 +40,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <input type="password" name="password" class="cyber-input mb-3" placeholder="Contraseña" required>
 
-            <button class="cyber-btn btn-success w-100">Registrar</button>
+            <button class="cyber-btn" type="submit">Registrar</button>
         </form>
 
-        <a href="login.php" class="cyber-btn btn-link text-info mt-2">Ir al login</a>
+        <a href="login.php" class="btn-link">
 
     </div>
 </div>
