@@ -29,12 +29,12 @@ include("db.php");
             display: block; /* Evita que Bootstrap intente animarla como item de carrusel */
         }
 
-        .btn-admin { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .cyber-btn-admin { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
     </style>
 </head>
 <body class="bg-light">
 
-<a href="admin.php" class="btn btn-dark btn-admin shadow">⚙️ Panel de Control</a>
+<a href="admin.php" class="cyber-btn btn-dark cyber-btn-admin shadow">⚙️ Panel de Control</a>
 
 <div class="container mt-5">
     <h2 class="text-center mb-4">carrusel</h2>
@@ -50,7 +50,7 @@ include("db.php");
                 <span id="contador" class="badge bg-secondary mb-1">Cargando...</span>
                 <div id="nombre-foto" class="fw-bold d-block"></div>
             </div>
-            <button class="btn btn-primary px-4" id="btn-next">Siguiente ➡️</button>
+            <button class="cyber-btn btn-primary px-4" id="btn-next">Siguiente ➡️</button>
         </div>
     </div>
 </div>
