@@ -36,7 +36,7 @@ body {
    CARD CYBER
 ========================= */
 
-.card {
+.cyber-card{
 
     width: 100%;
 
@@ -153,7 +153,7 @@ label {
    INPUTS
 ========================= */
 
-.form-control {
+.cyber-input {
 
     background: #0a001a;
 
@@ -168,7 +168,7 @@ label {
     transition: .3s;
 }
 
-.form-control:focus {
+.cyber-input:focus {
 
     border-color: #c77dff;
 
@@ -186,7 +186,7 @@ label {
    BOTONES
 ========================= */
 
-.btn {
+.cyber-btn {
 
     border: none;
 
@@ -203,7 +203,7 @@ label {
     cursor: pointer;
 }
 
-.btn:hover {
+.cyber-btn:hover {
 
     transform: translateY(-2px);
 }
@@ -212,7 +212,7 @@ label {
    BOTON PRIMARY
 ========================= */
 
-.btn-primary {
+.cyber-btn {
 
     background:
         linear-gradient(
@@ -224,7 +224,7 @@ label {
     color: white;
 }
 
-.btn-primary:hover {
+.cyber-btn:hover {
 
     box-shadow:
         0 0 15px #c77dff,
@@ -235,7 +235,7 @@ label {
    BOTON SUCCESS
 ========================= */
 
-.btn-success {
+.cyber-btn-success {
 
     background:
         linear-gradient(
@@ -247,7 +247,7 @@ label {
     color: white;
 }
 
-.btn-success:hover {
+.cyber-btn-success:hover {
 
     box-shadow:
         0 0 12px #c77dff;
