@@ -1,152 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* =========================
    BODY
 ========================= */
 
 body {
+
     min-height: 100vh;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     background:
         radial-gradient(circle at top, #1a0033, #05010d);
 
-    font-family: 'Segoe UI', sans-serif;
-    color: #fff;
+    font-family: 'Orbitron', sans-serif;
 
-    padding: 30px;
+    padding: 20px;
 }
 
 /* =========================
-   CONTENEDOR
+   LOGIN WRAPPER
 ========================= */
 
-.container {
+.login-wrapper {
+
     width: 100%;
-    max-width: 1200px;
+
+    max-width: 550px;
 }
 
 /* =========================
-   CARD CYBER
+   CYBER CARD
 ========================= */
 
-.cyber-card{
+.cyber-card {
 
     width: 100%;
-
-    min-width: 450px;
 
     background: rgba(10, 0, 26, 0.92);
 
-    border: 1px solid rgba(199, 125, 255, 0.25);
+    border: 1px solid rgba(199,125,255,.25);
 
-    border-radius: 20px;
+    border-radius: 24px;
 
-    padding: 40px;
+    padding: 45px;
 
-    backdrop-filter: blur(8px);
-
-    animation: glowPulse 3s infinite alternate;
+    backdrop-filter: blur(10px);
 
     box-shadow:
-        0 0 15px rgba(157, 78, 221, 0.2);
-}
-
-/* =========================
-   ANIMACIÓN GLOW
-========================= */
-
-@keyframes glowPulse {
-
-    from {
-        box-shadow:
-            0 0 15px rgba(157, 78, 221, 0.25);
-    }
-
-    to {
-        box-shadow:
-            0 0 28px rgba(199, 125, 255, 0.55);
-    }
-}
-
-/* =========================
-   TITULOS
-========================= */
-
-h1,
-h2,
-h3 {
-
-    text-align: center;
-
-    color: #fff;
-
-    margin-bottom: 25px;
-
-    text-shadow:
-        0 0 8px #9d4edd,
-        0 0 18px #c77dff;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-
-    font-size: 1.7rem;
+        0 0 25px rgba(157,78,221,.25);
 
     animation:
-        flicker 2s infinite alternate;
-}
-
-/* =========================
-   FLICKER
-========================= */
-
-@keyframes flicker {
-
-    from {
-
-        text-shadow:
-            0 0 5px #9d4edd;
-    }
-
-    to {
-
-        text-shadow:
-            0 0 18px #c77dff;
-    }
-}
-
-/* =========================
-   FORMULARIOS
-========================= */
-
-form {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
-}
-
-label {
-
-    color: #d8b4fe;
-
-    font-size: 14px;
+        glowPulse 3s infinite alternate;
 }
 
 /* =========================
@@ -155,15 +62,23 @@ label {
 
 .cyber-input {
 
+    width: 100%;
+
+    height: 58px;
+
     background: #0a001a;
 
     border: 1px solid #7b2cbf;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
-    color: #fff;
+    color: white;
 
-    padding: 14px;
+    padding: 0 18px;
+
+    margin-bottom: 18px;
+
+    outline: none;
 
     transition: .3s;
 }
@@ -173,46 +88,32 @@ label {
     border-color: #c77dff;
 
     box-shadow:
-        0 0 10px rgba(199, 125, 255, 0.7);
-
-    background: #0a001a;
-
-    color: #fff;
-
-    outline: none;
+        0 0 15px rgba(199,125,255,.5);
 }
 
 /* =========================
-   BOTONES
+   BOTON
 ========================= */
 
 .cyber-btn {
+
+    width: 100%;
+
+    height: 58px;
 
     border: none;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
-    padding: 14px 18px;
+    font-size: 16px;
 
     font-weight: bold;
 
-    letter-spacing: 1px;
-
-    transition: .3s ease;
+    color: white;
 
     cursor: pointer;
-}
 
-.cyber-btn:hover {
-
-    transform: translateY(-2px);
-}
-
-/* =========================
-   BOTON PRIMARY
-========================= */
-
-.cyber-btn {
+    transition: .3s;
 
     background:
         linear-gradient(
@@ -220,145 +121,13 @@ label {
             #7b2cbf,
             #c77dff
         );
-
-    color: white;
 }
 
 .cyber-btn:hover {
 
-    box-shadow:
-        0 0 15px #c77dff,
-        0 0 25px #9d4edd;
-}
-
-/* =========================
-   BOTON SUCCESS
-========================= */
-
-.cyber-btn-success {
-
-    background:
-        linear-gradient(
-            45deg,
-            #560bad,
-            #7b2cbf
-        );
-
-    color: white;
-}
-
-.cyber-btn-success:hover {
+    transform: translateY(-2px);
 
     box-shadow:
-        0 0 12px #c77dff;
-}
-
-/* =========================
-   TABLAS
-========================= */
-
-.table {
-
-    width: 100%;
-
-    border-collapse: collapse;
-
-    overflow: hidden;
-
-    border-radius: 15px;
-
-    margin-top: 20px;
-}
-
-.table thead {
-
-    background:
-        rgba(123, 44, 191, 0.15);
-}
-
-.table th {
-
-    color: #c77dff;
-
-    padding: 18px;
-
-    text-align: left;
-
-    text-shadow:
-        0 0 5px #9d4edd;
-}
-
-.table td {
-
-    padding: 18px;
-
-    border-top:
-        1px solid rgba(199,125,255,.12);
-}
-
-/* =========================
-   HOVER TABLA
-========================= */
-
-.table-hover tbody tr {
-
-    transition: .3s;
-}
-
-.table-hover tbody tr:hover {
-
-    background-color:
-        rgba(157, 78, 221, 0.15);
-}
-
-/* =========================
-   IMAGENES TABLA
-========================= */
-
-.table img {
-
-    width: 80px;
-
-    border-radius: 10px;
-
-    border:
-        1px solid rgba(199,125,255,.3);
-}
-
-/* =========================
-   GRID PANEL ADMIN
-========================= */
-
-.dashboard-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        350px 1fr;
-
-    gap: 30px;
-
-    align-items: start;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-    .dashboard-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    body {
-
-        padding: 20px;
-    }
-
-    .card {
-
-        padding: 22px;
-    }
+        0 0 18px #c77dff,
+        0 0 28px #9d4edd;
 }
